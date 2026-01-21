@@ -9,78 +9,93 @@
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
         header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid var(--accent); }
         .container { max-width: 950px; margin: 20px auto; padding: 15px; }
-        
-        /* Navigation Tabs */
         .tab-container { display: flex; justify-content: center; gap: 12px; margin-bottom: 30px; flex-wrap: wrap; }
         .tab-btn { background: var(--white); border: 2px solid var(--primary); color: var(--primary); padding: 12px 24px; cursor: pointer; border-radius: 30px; font-weight: bold; transition: all 0.3s ease; }
-        .tab-btn:hover { background: var(--primary); color: white; }
         .tab-btn.active { background: var(--primary); color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-        
-        /* Content Sections */
         .content-section { display: none; background: var(--white); padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 4px solid var(--primary); }
         .content-section.active { display: block; animation: slideUp 0.4s ease-out; }
         @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        
-        .feature-card { background: #f1f8f7; border-radius: 12px; padding: 15px; margin-bottom: 15px; border-left: 6px solid var(--secondary); }
-        .safety-badge { background: var(--accent); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; display: inline-block; margin-bottom: 10px; }
-        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9rem; }
-        .highlight { color: var(--primary); font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: var(--primary); color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .expert-note { background: #fffde7; border-left: 5px solid #fbc02d; padding: 15px; margin-top: 20px; font-weight: 500; }
+        footer { text-align: center; padding: 40px; color: #777; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Ahmad Kamaal Pasha</h1>
-    <p>Expert Travel Health Advisor | IGNOU Microbiology Researcher</p>
+    <p>Scientific Consultant | Microbiology Researcher | Travel Advisory</p>
 </header>
 
 <div class="container">
     <div class="tab-container">
-        <button class="tab-btn active" onclick="openTab('safety')">Safety & Travel</button>
-        <button class="tab-btn" onclick="openTab('unit2')">Microbial Taxonomy (Unit-2)</button>
-        <button class="tab-btn" onclick="openTab('unit1')">Historical Research (Unit-1)</button>
+        <button class="tab-btn active" onclick="openTab('safety')">Health & Safety</button>
+        <button class="tab-btn" onclick="openTab('unit2')">Unit 2: Taxonomy Hub</button>
+        <button class="tab-btn" onclick="openTab('unit1')">Unit 1: Foundations</button>
     </div>
 
     <div id="safety" class="content-section active">
-        <span class="safety-badge">Traveler Alert</span>
-        <h2 style="color: var(--primary);">✈️ Your Health is Our Priority</h2>
-        <p>सफर के दौरान बीमारियाँ सूक्ष्मजीवों के कारण फैलती हैं। हम विज्ञान के आधार पर आपकी यात्रा को सुरक्षित बनाते हैं:</p>
-        <div class="feature-card">
-            <span class="highlight">Bacteria Control:</span> हम जानते हैं कि <b>Monera</b> ग्रुप के परजीवी (Parasites) पानी से फैलते हैं, इसलिए हम हाइजीन के कड़े मानकों का पालन करते हैं।
+        <h2 style="color: var(--primary);">✈️ Global Health Standards</h2>
+        <p>एक सुरक्षित यात्रा के लिए सूक्ष्मजीवों की गहरी पहचान (Identification) अनिवार्य है।</p>
+        <div class="expert-note">
+            <b>Pasha's Health Insight:</b> "क्या आप जानते हैं कि साधारण एंटीबायोटिक्स सिर्फ 'Bacteria' पर काम करती हैं, लेकिन 'Archaea' पर बेअसर होती हैं? हमारी सलाह वैज्ञानिक रिसर्च पर आधारित होती है।"
         </div>
-        <div class="feature-card">
-            <span class="highlight">Fungal Prevention:</span> नमी वाले क्षेत्रों में <b>Fungi (Saprophytes)</b> से होने वाले इन्फेक्शन को रोकने के लिए विशेष परामर्श।
-        </div>
-        <p><i>"एक जानकार एजेंट ही एक सुरक्षित यात्रा दे सकता है।"</i></p>
     </div>
 
     <div id="unit2" class="content-section">
-        <h2 style="color: var(--primary);">🧬 Unit 2: Classification of Life</h2>
-        <p><b>Robert Whittaker (1969)</b> के 5-किंगडम सिस्टम की गहरी समझ:</p>
-        <ul>
-            <li><b>Monera:</b> Prokaryotic सूक्ष्मजीव जैसे बैक्टीरिया। ये सबसे पुराने और असरदार जीव हैं।</li>
-            <li><b>Protista:</b> पानी में रहने वाले एककोशिकीय Eukaryotes (जैसे Protozoa)।</li>
-            <li><b>Fungi:</b> Saprophytes जो मृत पदार्थों से पोषण लेते हैं (जैसे Yeast और Molds)।</li>
-            <li><b>Taxonomy:</b> सही पहचान (Classification) ही सही समाधान का रास्ता है।</li>
-        </ul>
+        <h2 style="color: var(--primary);">🧬 Unit 2: Modern Microbial Taxonomy</h2>
+        <p><b>Carl Woese's Three Domain System (Page 30-31):</b> जीवन को तीन बड़े डोमेन में बांटा गया है।</p>
         
+        
+
+        <h3>Comparison of the Three Domains (Table 2.2)</h3>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Bacteria</th>
+                <th>Archaea</th>
+                <th>Eukarya</th>
+            </tr>
+            <tr>
+                <td>Nucleus</td>
+                <td>Absent</td>
+                <td>Absent</td>
+                <td>Present</td>
+            </tr>
+            <tr>
+                <td>Cell Wall</td>
+                <td>With Peptidoglycan</td>
+                <td>No Muramic Acid</td>
+                <td>No Muramic Acid</td>
+            </tr>
+            <tr>
+                <td>Membrane Lipid</td>
+                <td>Ester-linked</td>
+                <td>Ether-linked (Stronger)</td>
+                <td>Ester-linked</td>
+            </tr>
+            <tr>
+                <td>Antibiotic Sensitivity</td>
+                <td>Sensitive</td>
+                <td>Insensitive</td>
+                <td>Insensitive</td>
+            </tr>
+        </table>
+        <p style="margin-top:20px;"><b>Key takeaway:</b> Archaea are <i>Extremophiles</i>—they can survive in extreme boiling water and salt, making them unique in the microbial world.</p>
     </div>
 
     <div id="unit1" class="content-section">
-        <h2 style="color: var(--primary);">🔬 Fundamental Microbiology (Unit-1)</h2>
-        <div style="background: #fff5f5; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
-            <b>Pasha’s Thesis:</b> "Cyst का बनना शरीर की एक रक्षात्मक प्रतिक्रिया (Defensive Overreaction) है।"
-        </div>
-        <ul>
-            <li><b>Louis Pasteur:</b> Germ Theory और Sterilization के जनक।</li>
-            <li><b>Alexander Fleming:</b> पेनिसिलिन (Antibiotic) की खोज जो लाखों जानें बचाती है।</li>
-            <li><b>Robert Koch:</b> बीमारियों के कारणों को वैज्ञानिक रूप से साबित करने वाले वैज्ञानिक।</li>
-        </ul>
+        <h2 style="color: var(--primary);">🔬 Unit 1 Summary</h2>
+        <p>Germ Theory, History, and Alexander Fleming's legacy. This section covers the fundamental shift from superstition to modern science.</p>
+        <p><b>Original Thesis:</b> Cystic defensive mechanisms as an immune overreaction.</p>
     </div>
 </div>
 
 <footer>
-    <p>Ahmad Kamaal Pasha | Deoband | IGNOU Microbiology Research Portfolio</p>
+    <p>&copy; 2026 Ahmad Kamaal Pasha | Deoband, India | IGNOU Research Series</p>
 </footer>
 
 <script>
